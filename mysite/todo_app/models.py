@@ -23,7 +23,7 @@ class backend(models.Model):
         self.deneme="badana içine girdiğini gösteren kod"
         print(self.deneme)
         print(self.adana)
-        api = SentinelAPI('flavves', 'BATUhan123.', 'https://scihub.copernicus.eu/dhus')
+        api = SentinelAPI('flavves', 'şifre', 'https://scihub.copernicus.eu/dhus')
         footprint = geojson_to_wkt(read_geojson('media/map.geojson'))
         print(footprint)
         self.products = api.query(footprint,date=('20191219', date(2019, 12, 29)),platformname='Sentinel-2')
